@@ -10,6 +10,11 @@ class SongsController < ApplicationController
     playlist = user.playlists.find {|playlist| playlist.name == "Samplify-#{@genre}"}
     playlist.add_tracks!([track])
     @track = @tracks.first
+    @name = @track["name"]
+    @preview = @track["preview"]
+    @artist = @track["artist"]
+    @id = @track["id"]
+    @img = @track["img"]
     render :show
   end
 
@@ -36,6 +41,11 @@ class SongsController < ApplicationController
       end
     end
     @track = @tracks.shuffle.first
+    @name = @track[:name]
+    @preview = @track[:preview]
+    @artist = @track[:artist]
+    @id = @track[:id]
+    @img = @track[:img]
   end
 
   def destroy

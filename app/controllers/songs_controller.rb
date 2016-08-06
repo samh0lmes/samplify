@@ -1,9 +1,13 @@
 class SongsController < ApplicationController
-  def index
-    categories = RSpotify::Category.list
-    @genres = {}
-    categories.each do |category|
-      @genres[category.name] = category.icons.first["url"]
-    end
+  def create
+  end
+
+  def show
+    spotify_user = RSpotify::User.new(session[:user])
+    playlist = spotify_user.playlists.find {|playlist| playlist.name == "our-app-#{params[:genre]}"}
+    playlist = spotify_user.create_playlist!("our-app-#{params[:genre]}") unless playlist
+  end
+
+  def destroy
   end
 end

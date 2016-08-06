@@ -1,4 +1,7 @@
 <% @genres.each do |name, img| %>
-  <a href = "/songs" ><img src = <%= img %> />
-  <h3><%= name %></h3></a>
+<%= link_to song_path(genre: name) do %>
+  <%= image_tag(img) %>
+  <h3><%= name %></h3>
 <% end %>
+<% end %>
+

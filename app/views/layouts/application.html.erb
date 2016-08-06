@@ -6,6 +6,9 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <% if session[:user] %>
+      <%= link_to 'Logout', '/user', method: :delete %>
+    <% end %>
   </head>
 
   <body>

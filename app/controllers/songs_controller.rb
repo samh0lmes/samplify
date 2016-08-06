@@ -1,4 +1,5 @@
 class SongsController < ApplicationController
+
   def create
     @tracks = params[:tracks].as_json
     @genre = params[:genre]
@@ -24,7 +25,7 @@ class SongsController < ApplicationController
     playlists.shuffle.each do |playlist|
       playlist.tracks.shuffle.each do |track|
         next unless track.preview_url
-        break if i >= 40
+        break if i >= 20
         @tracks[i] = { name: track.name,
                        preview: track.preview_url,
                        artist: track.artists.first.name,

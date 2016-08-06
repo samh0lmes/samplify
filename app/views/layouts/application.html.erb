@@ -2,22 +2,29 @@
 <html>
   <head>
     <title>Samplify</title>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <body>
-    <nav class="transparent">
-      <div class="nav-wrapper darken-1">
-        <%= link_to 'Samplify', "#", class: "brand-logo"%>
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <% if session[:user] %>
-        <li><%= link_to 'Logout', '/user', method: :delete, class: "waves-effect waves-light btn-large" %></li>
-        <% end %>
-        </ul>
+    
+    <div class="header">
+      <div class="left"> 
+        <i class="medium material-icons">queue_music</i>  
+        <h3 class="brand-logo">Samplify</h3>
       </div>
-    </nav>
+
+      <div class="right">
+        <% if session[:user] %>
+        <%= link_to 'Logout', '/user', method: :delete, class: "waves-effect waves-light btn-large" %>
+        <% end %>
+      </div>
+    </div>
+   
     <%= yield %>
   </body>
 </html>

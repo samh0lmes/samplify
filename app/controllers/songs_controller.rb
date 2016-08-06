@@ -1,4 +1,5 @@
 class SongsController < ApplicationController
+  include SongsHelper
 
   def create
     @tracks = params[:tracks].as_json
@@ -23,7 +24,7 @@ class SongsController < ApplicationController
     spotify_user = RSpotify::User.new(session[:user])
     existing_playlist = spotify_user.playlists.find {|playlist| playlist.name == "Samplify-#{@genre}"}
     @playlist = spotify_user.create_playlist!("Samplify-#{@genre}") unless existing_playlist
-    category = RSpotify::Category.find("#{@genre.downcase.tr(" ", "")}")
+    category = RSpotify::Category.find("#{set_genre(@genre)}")
     playlists = category.playlists
     @tracks = []
     i = 0

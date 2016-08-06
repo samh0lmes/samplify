@@ -6,7 +6,7 @@
         <div class="card-stacked">
           <div class="card-content">
             <p><%=@track.artist%></p>
-            <p>Auto Play</p>
+            <p>Auto Play: <audio id= "#preview" src = "<%=@preview %>" controls autoplay></audio></p>
           </div>
           <div class="card-action">
           <%= link_to "Next Song", delete_song_path(tracks: @tracks, genre: @genre) %><br>
@@ -16,3 +16,7 @@
     </div>
   </div>
 </div>
+
+
+
+

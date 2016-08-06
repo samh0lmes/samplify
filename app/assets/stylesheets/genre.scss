@@ -9,16 +9,20 @@
 }
 
 .genre-card {
-  border: 2px solid black;
+  border: 1px solid black;
   text-align: center;
   height: 30em;
+  background-color: rgba(51, 51, 51, 0.45);
 }
 
 .card-image {
-  padding-top: 2em;
+  margin-top: 2em;
+  border-top: white solid 3px;
+  border-bottom: white solid 3px;
 }
 
 .genre-header {
   text-align: center;
   color: #6ae368;
+  font-weight: bold;
 }

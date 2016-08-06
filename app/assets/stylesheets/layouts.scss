@@ -1,13 +1,47 @@
-.brand-logo {
-  font-size: 14px;
+.header {
+	margin-top: 15px;
+	width: 100%;
+	display: inline;
+	position: absolute;
+	vertical-align: middle;
+	top: 0;
+
+	.left {
+		width: 45%;
+
+		display: inline-block;
+		
+		.material-icons {
+			color: #6ae368;
+			display: inline-block;
+			}
+		.brand-logo {
+			display: inline-block;
+			margin-top: 5px;
+			color: #6ae368;
+			vertical-align: top;
+		}
+	}
+
+	.right {
+		width: 45%;
+		position: fixed;
+		right: 0;
+		padding-left: 35%;
+		float: right;
+
+	}
 }
 
-nav {
-  position: fixed;
-}
+
+
+
+
+
 
 .btn-large {
-  border-radius: 35px;
-  background-color: #6ae368;
+	border-radius: 35px;
+	background-color: #6ae368;
 }
+
 

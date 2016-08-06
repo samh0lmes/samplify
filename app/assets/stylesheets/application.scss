@@ -22,6 +22,22 @@
  @import "song";
 
 
+
 .hidden {
   display: none;
 }
+
+* {
+	font-family: "helvectica neue";
+}
+
+body {
+  background-image: image-url("headphones.jpg");
+  background-size: cover !important;
+  background-position: center;
+  background-attachment: fixed;
+  margin-bottom: 0px;
+  height: 100vh;
+  width: 100%;
+}
+

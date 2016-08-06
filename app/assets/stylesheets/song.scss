@@ -2,8 +2,9 @@
   position: relative;
   width: 100%;
   left: 2%;
-  border: 2px solid black;
+  border: 1px solid black;
   height: 500px;
+  background-color: rgba(51, 51, 51, 0.45);
 }
 
 #no {
@@ -23,27 +24,27 @@
 .song-genre-header {
   text-align: center;
   text-transform: uppercase;
+  color: #6ae368;
+  font-weight: bold;
 }
 
 .song-content {
   position: relative;
-  width: 55%;
-  left: 45%;
+  width: 50%;
+  left: 50%;
   bottom: 350px;
   height: 350px;
   text-align: center;
   word-wrap: break-word;
-  // border: 2px solid black;
+  //border: 2px solid black;
 }
 
-// .song-name {
-//   position: fixed;
-//   left: 52%;
-//   top: 20%;
-// }
+.song-name {
 
-// .song-artist {
-//   position: fixed;
-//   left: 55%;
-//   top: 40%;
-// }
+      color: white;
+ }
+
+.song-artist {
+
+      color: white;
+ }

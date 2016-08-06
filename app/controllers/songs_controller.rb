@@ -7,7 +7,7 @@ class SongsController < ApplicationController
     track = RSpotify::Track.find("#{track_id}")
     @tracks.delete_at(0)
     user = RSpotify::User.new(session[:user])
-    playlist = user.playlists.find {|playlist| playlist.name == "our-app-#{@genre}"}
+    playlist = user.playlists.find {|playlist| playlist.name == "Samplify-#{@genre}"}
     playlist.add_tracks!([track])
     @track = @tracks.first
     render :show
@@ -16,8 +16,8 @@ class SongsController < ApplicationController
   def show
     @genre = params[:genre]
     spotify_user = RSpotify::User.new(session[:user])
-    existing_playlist = spotify_user.playlists.find {|playlist| playlist.name == "our-app-#{@genre}"}
-    @playlist = spotify_user.create_playlist!("our-app-#{@genre}") unless existing_playlist
+    existing_playlist = spotify_user.playlists.find {|playlist| playlist.name == "Samplify-#{@genre}"}
+    @playlist = spotify_user.create_playlist!("Samplify-#{@genre}") unless existing_playlist
     category = RSpotify::Category.find("#{@genre.downcase.tr(" ", "")}")
     playlists = category.playlists
     @tracks = []

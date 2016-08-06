@@ -1,0 +1,22 @@
+/* line 1, /Users/katherinebroner/Desktop/Hackathon/spotify-search/app/assets/stylesheets/layouts.scss */
+.home-image {
+  background-image: url(/assets/headphones-0f73e8c3537aaf59a53aa766ad686d6f3ae042916a5581dbfeb2fc835f2ba2f4.jpg);
+  background-size: cover !important;
+  background-position: center;
+  background-attachment: fixed;
+  margin-bottom: 0px;
+  height: 100vh;
+  padding-top: 5em;
+}
+
+/* line 11, /Users/katherinebroner/Desktop/Hackathon/spotify-search/app/assets/stylesheets/layouts.scss */
+.home-image-inner-container {
+  color: white;
+  margin: auto;
+  width: 50%;
+  margin-top: 4em;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  text-align: center;
+  border: white solid 3px;
+}

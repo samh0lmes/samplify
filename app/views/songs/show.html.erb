@@ -1,8 +1,18 @@
-<h1><%= @track %></h1>
-
-<audio controls>
-  <source src=<%= @track.preview %> type="audio/mpeg">
-</audio>
-
-<%= link_to "No, this song sucks", delete_song_path(tracks: @tracks, genre: @genre) %><br>
-<%= link_to "YAAAS", create_song_path(tracks: @tracks, genre: @genre) %>
+<div class="container">
+  <div class="col s12 m7">
+    <h2 class="header"><%=@track.artist%></h2>
+      <div class="card-horizontal">
+        <%= image_tag(@track.img, :class => "card-image ")%>
+        <div class="card-stacked">
+          <div class="card-content">
+            <p><%=@track.artist%></p>
+            <p>Auto Play</p>
+          </div>
+          <div class="card-action">
+          <%= link_to "Next Song", delete_song_path(tracks: @tracks, genre: @genre) %><br>
+          <%= link_to "Add to Playlist", create_song_path(tracks: @tracks, genre: @genre) %>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>

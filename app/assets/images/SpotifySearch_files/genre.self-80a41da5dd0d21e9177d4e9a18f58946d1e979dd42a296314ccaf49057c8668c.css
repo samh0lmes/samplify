@@ -1,0 +1,22 @@
+/* line 4, /Users/katherinebroner/Desktop/Hackathon/spotify-search/app/assets/stylesheets/genre.scss */
+.card-holder {
+  vertical-align: top;
+  float: center;
+}
+
+/* line 9, /Users/katherinebroner/Desktop/Hackathon/spotify-search/app/assets/stylesheets/genre.scss */
+.genre-card {
+  border: 2px solid black;
+  text-align: center;
+  height: 28em;
+}
+
+/* line 19, /Users/katherinebroner/Desktop/Hackathon/spotify-search/app/assets/stylesheets/genre.scss */
+.card-image {
+  padding-top: 2em;
+}
+
+/* line 23, /Users/katherinebroner/Desktop/Hackathon/spotify-search/app/assets/stylesheets/genre.scss */
+.genre-header {
+  text-align: center;
+}

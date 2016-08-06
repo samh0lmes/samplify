@@ -1,17 +1,15 @@
 <div class="container">
-  <div class="col s12 m7">
-    <h2 class="header"><%=@track.artist%></h2>
-      <div class="card-horizontal">
-        <%= image_tag(@track.img, :class => "card-image ")%>
-        <div class="card-stacked">
-          <div class="card-content">
-            <p><%=@track.artist%></p>
-            <p>Auto Play: <audio id= "#preview" src = "<%=@preview %>" controls autoplay></audio></p>
-          </div>
-          <div class="card-action">
-          <%= link_to "Next Song", delete_song_path(tracks: @tracks, genre: @genre) %><br>
-          <%= link_to "Add to Playlist", create_song_path(tracks: @tracks, genre: @genre) %>
-          </div>
+  <%= link_to "< GENRES", genres_path, class: "waves-effect waves-light btn-large"%>
+  <h1 class="song-genre-header"><%=@genre%></h1>
+  <div class="col s12 song-holder">
+      <div class="song-card">
+        <%= image_tag(@img, :class => "card-image song-image col s6 ")%>
+            <!-- <p>Auto Play: <audio id= "#preview" src = "<%=@preview %>" controls autoplay></audio></p> -->
+          <div class="song-content">
+          <h2 class="song-name"><%=@name%></h2>
+          <h4 class="song-artist"><%=@artist%></h4><br><br>
+          <%= link_to "SKIP", delete_song_path(tracks: @tracks, genre: @genre), class: "waves-effect waves-light btn-large" %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <%= link_to "ADD SONG", create_song_path(tracks: @tracks, genre: @genre), class: "waves-effect waves-light btn-large" %>
         </div>
     </div>
   </div>

@@ -53,6 +53,11 @@ class SongsController < ApplicationController
     @genre = params[:genre]
     @tracks.delete_at(0)
     @track = @tracks.first
+    @name = @track["name"]
+    @preview = @track["preview"]
+    @artist = @track["artist"]
+    @id = @track["id"]
+    @img = @track["img"]
     render :show
   end
 end

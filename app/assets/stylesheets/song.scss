@@ -1,0 +1,45 @@
+.song-holder {
+  position: relative;
+  width: 100%;
+  left: 2%;
+  border: 2px solid black;
+  height: 500px;
+}
+
+.song-image {
+  position: relative;
+  top: 15px;
+  left: 8%;
+  max-height: 400px;
+  max-width: 400px;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.song-genre-header {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.song-content {
+  position: relative;
+  width: 55%;
+  left: 45%;
+  bottom: 350px;
+  height: 350px;
+  text-align: center;
+  word-wrap: break-word;
+  // border: 2px solid black;
+}
+
+// .song-name {
+//   position: fixed;
+//   left: 52%;
+//   top: 20%;
+// }
+
+// .song-artist {
+//   position: fixed;
+//   left: 55%;
+//   top: 40%;
+// }

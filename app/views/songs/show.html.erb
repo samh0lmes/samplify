@@ -8,7 +8,7 @@
           <div class="song-content">
           <h2 class="song-name"><%=@name%></h2>
           <h4 class="song-artist"><%=@artist%></h4><br><br>
-          <%= link_to "SKIP", delete_song_path(tracks: @tracks, genre: @genre), class: "waves-effect waves-light btn-large" %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <%= link_to "SKIP", delete_song_path(tracks: @tracks, genre: @genre), class: "waves-effect waves-light btn-large red" %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           <%= link_to "ADD SONG", create_song_path(tracks: @tracks, genre: @genre), class: "waves-effect waves-light btn-large" %>
         </div>
     </div>

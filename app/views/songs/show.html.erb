@@ -1,1 +1,4 @@
 <h1><%= @track %></h1>
+
+<%= link_to "No, this song sucks", delete_song_path(tracks: @tracks, genre: @genre) %><br>
+<%= link_to "YAAAS", create_song_path(tracks: @tracks, genre: @genre) %>

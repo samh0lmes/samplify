@@ -6,7 +6,6 @@ class UsersController < ApplicationController
     # tracks = RSpotify::Track.search('Video Games')
     # playlist.add_tracks!(tracks)
     recommendations = RSpotify::Recommendations.generate(seed_genres: ['blues', 'country'])
-    render :show, locals: {user: spotify_user, playlists: spotify_user.playlists, recommendations: recommendations}
   end
 
   def destroy

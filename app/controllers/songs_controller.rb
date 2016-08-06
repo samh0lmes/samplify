@@ -29,7 +29,7 @@ class SongsController < ApplicationController
     i = 0
     playlists.shuffle.each do |playlist|
       playlist.tracks.shuffle.each do |track|
-        next unless track.preview_url
+        next unless track.name && track.preview_url && track.artists && track.id && track.album.images
         break if i >= 20
         @tracks[i] = { name: track.name,
                        preview: track.preview_url,
@@ -53,6 +53,11 @@ class SongsController < ApplicationController
     @genre = params[:genre]
     @tracks.delete_at(0)
     @track = @tracks.first
+    @name = @track["name"]
+    @preview = @track["preview"]
+    @artist = @track["artist"]
+    @id = @track["id"]
+    @img = @track["img"]
     render :show
   end
 end

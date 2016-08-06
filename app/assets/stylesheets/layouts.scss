@@ -1,24 +1,13 @@
-.home-image {
-  background-image: image-url("headphones.jpg");
-  background-size: cover !important;
-  background-position: center;
-  background-attachment: fixed;
-  margin-bottom: 0px;
-  height: 100vh;
-  padding-top: 5em;
+.brand-logo {
+  font-size: 14px;
 }
 
-.home-image-inner-container {
-  color: white;
-  margin: auto;
-  width: 50%;
-  margin-top:4em;
-  padding-top: 3%;
-  padding-bottom: 3%;
-  text-align: center;
-  border: white solid 3px;
+nav {
+  position: fixed;
 }
 
-// nav {
-//   background-color: none;
-// }
+.btn-large {
+  border-radius: 35px;
+  background-color: #6ae368;
+}
+

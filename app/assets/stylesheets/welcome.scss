@@ -1,3 +1,51 @@
 // Place all the styles related to the Welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.home-image {
+  background-image: image-url("headphones.jpg");
+  background-size: cover !important;
+  background-position: center;
+  background-attachment: fixed;
+  margin-bottom: 0px;
+  height: 100vh;
+  padding-top: 5em;
+}
+
+.home-image-inner-container {
+  color: white;
+  width: 40%;
+  height: 40%;
+  overflow: auto;
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+  text-align: center;
+  border: white solid 3px;
+}
+
+.center-info {
+	width: 50%;
+  height: 50%;
+  overflow: auto;
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+}
+
+.home-text {
+	text-align: center;
+	margin: 0 auto;
+	width: 100%;
+}
+
+.signin-button {
+	margin-top: 15px;
+}
+
+.btn-large {
+  border-radius: 35px;
+  background-color: #6ae368;
+}
+

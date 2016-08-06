@@ -1,7 +1,16 @@
+<div class="container">
+  <h1 class="genre-header">GENRES</h1>
+  <div class="row">
+    <div class="col s12 card-holder">
 <% @genres.each do |name, img| %>
+      <div class="card genre-card col s6">
 <%= link_to song_path(genre: name) do %>
-  <%= image_tag(img) %>
-  <h3><%= name %></h3>
+  <%= image_tag(img, :class => "card-image ")%>
+  <h3 class="card-content"><%= name %></h3>
 <% end %>
+</div>
 <% end %>
+</div>
+</div>
+</div>
 

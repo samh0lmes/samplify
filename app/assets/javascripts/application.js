@@ -16,3 +16,9 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+$(document).ready(function() {
+	$(".card-image").click(function() {
+		$(".overlay, .overlay-message").show();
+	})
+});

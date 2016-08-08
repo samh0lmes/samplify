@@ -10,6 +10,7 @@ class SongsController < ApplicationController
     user = RSpotify::User.new(session[:user])
     playlist = user.playlists.find {|playlist| playlist.name == "Samplify-#{@genre}"}
     playlist.add_tracks!([track])
+    user.save_tracks!([track])
     @track = @tracks.first
     @name = @track["name"]
     @preview = @track["preview"]

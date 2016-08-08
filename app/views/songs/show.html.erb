@@ -1,7 +1,7 @@
 <div class="container">
   <h1 class="song-genre-header"><%=@genre%></h1>
   <div class="col s12 song-holder">
-     <%= link_to "< GENRES", genres_path, class: "waves-effect waves-light btn-large", id: "back" %>
+     <%= link_to "< CATEGORIES", genres_path, class: "waves-effect waves-light btn-large", id: "back" %>
       <div class="song-card">
         <%= image_tag(@img, :class => "card-image song-image col s6 ")%>
           <audio class = "hidden" src = "<%=@preview %>" controls autoplay></audio>
